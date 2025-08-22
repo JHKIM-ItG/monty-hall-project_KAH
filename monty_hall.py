@@ -1,4 +1,9 @@
+from random import randrange
 
+doors, iterations = 3, 100000  # could try 100,1000
+
+print("\nMonty Hall problem simulation:")
+print(f"{doors} doors, {iterations} iterations.\n")
 
 def monty_hall(choice, switch=False, doorCount=doors):
     # 문 배열 초기화 (False = 꽝, True = 당첨)
@@ -29,3 +34,4 @@ print(f"Not switching allows you to win {not_switching_wins} out of {iterations}
 print(f"Switching allows you to win {switching_wins} out of {iterations} times.\n")
 print(f"Winning rate without switching: {not_switching_wins / iterations:.2%}")
 print(f"Winning rate with switching: {switching_wins / iterations:.2%}")
+
