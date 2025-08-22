@@ -1,3 +1,5 @@
+
+
 def monty_hall(choice, switch=False, doorCount=doors):
     # 문 배열 초기화 (False = 꽝, True = 당첨)
     door = [False] * doorCount
@@ -18,3 +20,12 @@ def monty_hall(choice, switch=False, doorCount=doors):
         return alternative  # 문을 바꾸면 alternative 결과에 따라 당첨 여부 결정
     else:
         return chosen       # 바꾸지 않으면 처음 선택한 값
+
+      
+      
+      
+      
+print(f"Not switching allows you to win {not_switching_wins} out of {iterations} times.")
+print(f"Switching allows you to win {switching_wins} out of {iterations} times.\n")
+print(f"Winning rate without switching: {not_switching_wins / iterations:.2%}")
+print(f"Winning rate with switching: {switching_wins / iterations:.2%}")
