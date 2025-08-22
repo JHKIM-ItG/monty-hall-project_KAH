@@ -26,10 +26,9 @@ def monty_hall(choice, switch=False, doorCount=doors):
     else:
         return chosen       # 바꾸지 않으면 처음 선택한 값
 
-      
-      
-      
-      
+not_switching_wins = sum(monty_hall(randrange(3), switch=False) for _ in range(iterations))
+switching_wins = sum(monty_hall(randrange(3), switch=True) for _ in range(iterations))      
+   
 print(f"Not switching allows you to win {not_switching_wins} out of {iterations} times.")
 print(f"Switching allows you to win {switching_wins} out of {iterations} times.\n")
 print(f"Winning rate without switching: {not_switching_wins / iterations:.2%}")
